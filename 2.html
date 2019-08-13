@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let a = document.createElement('a');
+        let first = (a) => {
+            a.title = "Google";
+            a.href = "https://google.com";
+            let linkText = document.createTextNode("Google");
+            a.appendChild(linkText);
+            document.body.appendChild(a);
+        }
+        first(a);
+
+        document.write("\n");
+
+        let b = document.createElement('a');
+        let second = (b) => {
+            b.title = "Google";
+            b.href = "https://google.com";
+            let linkText = document.createTextNode("Google");
+            b.appendChild(linkText);
+            document.body.appendChild(b);
+        }
+        second(b);
+
+        document.write("\n");
+
+        let c = document.createElement('a');
+        let third = (c) => {
+            c.title = "Google";
+            c.href = "https://google.com";
+            let linkText = document.createTextNode("Google");
+            c.appendChild(linkText);
+            document.body.appendChild(c);
+        }
+        third(c);
+
+        document.write("\n");
+
+        let d = document.createElement('a');
+        let fourth = (d) => {
+            d.title = "Google";
+            d.href = "https://google.com";
+            let linkText = document.createTextNode("Google");
+            d.appendChild(linkText);
+            document.body.appendChild(d);
+        }
+        fourth(d);
+
+        document.write("\n");
+        
+        let e = document.createElement('a');
+        let fifth = (e) => {
+            e.title = "Google";
+            e.href = "https://google.com";
+            let linkText = document.createTextNode("Google");
+            e.appendChild(linkText);
+            document.body.appendChild(e);
+        }
+        fifth(e);
+
+        let changeText = () => {
+            const elements = document.getElementsByTagName('a');
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].onclick = () => {
+                    elements[i].innerHTML = elements[i].innerHTML + " " + "(" + elements[i].getAttribute('href') + ")";
+                    return false
+                }
+            };
+        }
+        changeText();
+    </script>
+</body>
+
+</html>

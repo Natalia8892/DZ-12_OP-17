@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let a = document.createElement('a');
+        let first = (a) => {
+            a.title = "GITHUB";
+            a.href = "https://github.com/";
+            let linkText = document.createTextNode("First site");
+            a.appendChild(linkText);
+            document.body.appendChild(a);
+        }
+        first(a);
+
+        document.write("\n");
+
+        let b = document.createElement('a');
+        let second = (b) => {
+            b.title = "GitHub";
+            b.href = "https://github.com/";
+            let linkText = document.createTextNode("Second site");
+            b.appendChild(linkText);
+            document.body.appendChild(b);
+        }
+        second(b);
+
+        let changeTitle = () => {
+            const elements = document.getElementsByTagName('a');
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].onmouseover = () => {
+                    elements[i].title = elements[i].title + " " + elements[i].innerHTML;
+                };
+            };
+        };
+        changeTitle();
+    </script>
+</body>
+
+</html>
